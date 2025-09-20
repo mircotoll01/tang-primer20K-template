@@ -36,20 +36,21 @@ BIT := $(TOP)-$(BOARD).fs
 
 .PHONY: all prog clean info
 
-all: $(BIT)
-
 # 1) synth (GHDL via Yosys)
+synth: $(SYNTH)
 $(SYNTH): $(VHDL_SRCS)
 	@echo "Synthesizing VHDL sources for TOP"
 	@printf "  %s\n" $(VHDL_SRCS)
 	$(YOSYS) -m ghdl -p "ghdl --std=08 $(VHDL_SRCS) -e $(TOP); synth_gowin -json $@ -family $(FAMILY)"
 
 # 2) place & route (nextpnr-himbaechel)
+impl: $(ROUTED)
 $(ROUTED): $(SYNTH) constr/$(BOARD).cst
 	@echo "Running place & route (nextpnr-himbaechel) -> $@"
 	$(NEXTPNR) --json $< --write $@ --device $(DEVICE) --freq $(FREQ) --vopt family=$(PART) --vopt cst=constr/$(BOARD).cst
 
 # 3) pack into .fs bitstream
+bit: $(BIT)
 $(BIT): $(ROUTED)
 	@echo "Packing bitstream -> $@"
 	$(PACK) -c -d $(PART) -o $@ $<
