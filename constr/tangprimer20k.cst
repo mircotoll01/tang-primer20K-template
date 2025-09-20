@@ -1,0 +1,340 @@
+// Constraint template for Tang Primer 20K Dock board
+// Each IO_LOC specifies the pin location
+// Each IO_PORT specifies standard electrical characteristics
+
+// Clock and Reset
+IO_LOC "clk" H11;
+IO_PORT "clk" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS18;
+// IO_LOC "rst_n" T10;
+// IO_PORT "rst_n" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// User LEDs LED0–LED5 on the core board (and onboard WS2812 RGB LED)
+// IO_LOC "led0" C13;
+// IO_PORT "led0" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "led1" A13;
+// IO_PORT "led1" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "led2" N16;
+// IO_PORT "led2" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "led3" N14;
+// IO_PORT "led3" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+IO_LOC "led" L14;
+IO_PORT "led" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS18;
+// IO_LOC "led5" L16;
+// IO_PORT "led5" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "led_ws2812" F14;
+// IO_PORT "led_ws2812" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// RGB LCD (Parallel Interface)
+// IO_LOC "lcd_dclk" R9;
+// IO_PORT "lcd_dclk" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_de" E15;
+// IO_PORT "lcd_de" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_hs" A15;
+// IO_PORT "lcd_hs" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_vs" D14;
+// IO_PORT "lcd_vs" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_r0" L9;
+// IO_PORT "lcd_r0" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_r1" N8;
+// IO_PORT "lcd_r1" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_r2" N9;
+// IO_PORT "lcd_r2" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_r3" N7;
+// IO_PORT "lcd_r3" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_r4" N6;
+// IO_PORT "lcd_r4" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_g0" D11;
+// IO_PORT "lcd_g0" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_g1" A11;
+// IO_PORT "lcd_g1" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_g2" B11;
+// IO_PORT "lcd_g2" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_g3" P7;
+// IO_PORT "lcd_g3" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_g4" R7;
+// IO_PORT "lcd_g4" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_g5" D10;
+// IO_PORT "lcd_g5" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_b0" B12;
+// IO_PORT "lcd_b0" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_b1" C12;
+// IO_PORT "lcd_b1" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_b2" B13;
+// IO_PORT "lcd_b2" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_b3" A14;
+// IO_PORT "lcd_b3" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_b4" B14;
+// IO_PORT "lcd_b4" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// SPI LCD lines:
+// IO_LOC "lcd_bl" P12;
+// IO_PORT "lcd_bl" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_data" L15;
+// IO_PORT "lcd_data" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_rs" J13;
+// IO_PORT "lcd_rs" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_cs" C16;
+// IO_PORT "lcd_cs" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_clk" F12;
+// IO_PORT "lcd_clk" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "lcd_resetn" G13;
+// IO_PORT "lcd_resetn" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// Camera (OV5640)
+// IO_LOC "cmos_scl" F14;
+// IO_PORT "cmos_scl" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_sda" F16;
+// IO_PORT "cmos_sda" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_vsync" G15;
+// IO_PORT "cmos_vsync" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_href" G14;
+// IO_PORT "cmos_href" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_pclk" F13;
+// IO_PORT "cmos_pclk" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_xclk" G12;
+// IO_PORT "cmos_xclk" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_rst_n" L13;
+// IO_PORT "cmos_rst_n" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_pwdn" C10;
+// IO_PORT "cmos_pwdn" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[0]"; T12
+// IO_PORT "cmos_db[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[1]"; T11
+// IO_PORT "cmos_db[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[2]"; P11
+// IO_PORT "cmos_db[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[3]"; R11
+// IO_PORT "cmos_db[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[4]"; M15
+// IO_PORT "cmos_db[4]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[5]"; M14
+// IO_PORT "cmos_db[5]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[6]"; J16
+// IO_PORT "cmos_db[6]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "cmos_db[7]"; J14
+// IO_PORT "cmos_db[7]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// USB ULPI Interface
+// IO_LOC "ulpi_stp" K11;
+// IO_PORT "ulpi_stp" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[7]"; R12
+// IO_PORT "ulpi_data[7]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[6]"; P13
+// IO_PORT "ulpi_data[6]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[5]"; R13
+// IO_PORT "ulpi_data[5]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[4]"; T14
+// IO_PORT "ulpi_data[4]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[3]"; H13
+// IO_PORT "ulpi_data[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[2]"; J12
+// IO_PORT "ulpi_data[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[1]"; H12
+// IO_PORT "ulpi_data[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_data[0]"; G11
+// IO_PORT "ulpi_data[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_nxt" K13;
+// IO_PORT "ulpi_nxt" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_dir" K12;
+// IO_PORT "ulpi_dir" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_clk" T15;
+// IO_PORT "ulpi_clk" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ulpi_resetn" T3;
+// IO_PORT "ulpi_resetn" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// Ethernet RMII Interface
+// IO_LOC "phyrst" F10;
+// IO_PORT "phyrst" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_clk50m" A9;
+// IO_PORT "netrmii_clk50m" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_txd[0]"; D16
+// IO_PORT "netrmii_txd[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_txd[1]"; E14
+// IO_PORT "netrmii_txd[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_txen" E16;
+// IO_PORT "netrmii_txen" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_rx_crs" M6;
+// IO_PORT "netrmii_rx_crs" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_rxd[0]"; F15
+// IO_PORT "netrmii_rxd[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_rxd[1]"; C9
+// IO_PORT "netrmii_rxd[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_mdc" F14;
+// IO_PORT "netrmii_mdc" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "netrmii_mdio" F16;
+// IO_PORT "netrmii_mdio" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// DDR3 Memory Interface
+// IO_LOC "ddr_bank[0]"; H4
+// IO_PORT "ddr_bank[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_bank[1]"; D3
+// IO_PORT "ddr_bank[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_bank[2]"; H5
+// IO_PORT "ddr_bank[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_odt"     R3;
+// IO_PORT "ddr_odt" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[0]"; F7
+// IO_PORT "ddr_addr[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[1]"; A4
+// IO_PORT "ddr_addr[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[2]"; D6
+// IO_PORT "ddr_addr[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[3]"; F8
+// IO_PORT "ddr_addr[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[4]"; C4
+// IO_PORT "ddr_addr[4]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[5]"; E6
+// IO_PORT "ddr_addr[5]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[6]"; B1
+// IO_PORT "ddr_addr[6]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[7]"; D8
+// IO_PORT "ddr_addr[7]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[8]"; A5
+// IO_PORT "ddr_addr[8]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[9]"; F9
+// IO_PORT "ddr_addr[9]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[10]"; K3
+// IO_PORT "ddr_addr[10]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[11]"; B7
+// IO_PORT "ddr_addr[11]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[12]"; A3
+// IO_PORT "ddr_addr[12]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_addr[13]"; C8
+// IO_PORT "ddr_addr[13]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_cke"     J2;
+// IO_PORT "ddr_cke" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_we"      L2;
+// IO_PORT "ddr_we" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_cas"     R6;
+// IO_PORT "ddr_cas" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_ras"     R4;
+// IO_PORT "ddr_ras" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dm[0]";   G1
+// IO_PORT "ddr_dm[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dm[1]";   K5
+// IO_PORT "ddr_dm[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_ck"      J1;
+// IO_PORT "ddr_ck" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_reset_n" B9;
+// IO_PORT "ddr_reset_n" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dqs[0]";  G2
+// IO_PORT "ddr_dqs[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dqs[1]";  J5
+// IO_PORT "ddr_dqs[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[0]";   G5
+// IO_PORT "ddr_dq[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[1]";   F5
+// IO_PORT "ddr_dq[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[2]";   F4
+// IO_PORT "ddr_dq[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[3]";   F3
+// IO_PORT "ddr_dq[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[4]";   E2
+// IO_PORT "ddr_dq[4]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[5]";   C1
+// IO_PORT "ddr_dq[5]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[6]";   E1
+// IO_PORT "ddr_dq[6]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[7]";   B3
+// IO_PORT "ddr_dq[7]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[8]";   M3
+// IO_PORT "ddr_dq[8]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[9]";   K4
+// IO_PORT "ddr_dq[9]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[10]";  N2
+// IO_PORT "ddr_dq[10]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[11]";  L1
+// IO_PORT "ddr_dq[11]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[12]";  P4
+// IO_PORT "ddr_dq[12]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[13]";  H3
+// IO_PORT "ddr_dq[13]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[14]";  R1
+// IO_PORT "ddr_dq[14]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "ddr_dq[15]";  M2
+// IO_PORT "ddr_dq[15]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// UART Interface
+// IO_LOC "uart_tx"    M11;
+// IO_PORT "uart_tx" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "uart_rx"    T13;
+// IO_PORT "uart_rx" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// SD Card Interface (SDIO)
+// IO_LOC "sd_clk"     N10;
+// IO_PORT "sd_clk" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "sd_cmd"     R14;
+// IO_PORT "sd_cmd" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "sd_dat[0]";  M8
+// IO_PORT "sd_dat[0]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "sd_dat[1]";  M7
+// IO_PORT "sd_dat[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "sd_dat[2]";  M10
+// IO_PORT "sd_dat[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "sd_dat[3]";  N11
+// IO_PORT "sd_dat[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "sd_det_a"   D15;
+// IO_PORT "sd_det_a" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// Audio DAC (PT8211)
+// IO_LOC "audio_pa_en" R16;
+// IO_PORT "audio_pa_en" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "audio_din" P15;
+// IO_PORT "audio_din" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "audio_ws" P16;
+// IO_PORT "audio_ws" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "audio_bck" N15;
+// IO_PORT "audio_bck" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+
+// HDMI Interface
+// IO_LOC "O_tmds_clk_p" G16,H15;
+// IO_PORT "O_tmds_clk_p" PULL_MODE=NONE DRIVE=3.5;
+// IO_LOC "O_tmds_data_p[0]" H14,H16;
+// IO_PORT "O_tmds_data_p[0]" PULL_MODE=NONE DRIVE=3.5;
+// IO_LOC "O_tmds_data_p[1]" J15,K16;
+// IO_PORT "O_tmds_data_p[1]" PULL_MODE=NONE DRIVE=3.5;
+// IO_LOC "O_tmds_data_p[2]" K14,K15;
+// IO_PORT "O_tmds_data_p[2]" PULL_MODE=NONE DRIVE=3.5;
+
+// Miscellaneous PMOD header GPIOs (from dock board) – user-accessible I/O not used by above peripherals
+// (Pins labeled pmodX_pY correspond to PMOD connector X, pin Y)
+// IO_LOC "pmod0[1]"; PIN28_IOB11B
+// IO_PORT "pmod0[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod0[2]"; PIN26_IOB8B
+// IO_PORT "pmod0[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod0[3]"; PIN39_IOB33A
+// IO_PORT "pmod0[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod0[4]"; PIN37_IOB31A
+// IO_PORT "pmod0[4]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod0[7]"; PIN27_IOB11A
+// IO_PORT "pmod0[7]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod0[8]"; PIN25_IOB8A
+// IO_PORT "pmod0[8]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod0[9]"; PIN36_IOB29B
+// IO_PORT "pmod0[9]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod0[1]0;" PIN38_IOB31B
+// IO_PORT "pmod0[1]0" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[1]"; PIN42_IOB41B
+// IO_PORT "pmod1[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[2]"; PIN35_IOB29A
+// IO_PORT "pmod1[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[3]"; PIN34_IOB23B
+// IO_PORT "pmod1[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[4]"; PIN30_IOB13B
+// IO_PORT "pmod1[4]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[7]"; PIN41_IOB41A
+// IO_PORT "pmod1[7]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[8]"; PIN40_IOB33B
+// IO_PORT "pmod1[8]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[9]"; PIN33_IOB23A
+// IO_PORT "pmod1[9]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod1[1]0;" PIN29_IOB13A
+// IO_PORT "pmod1[1]0" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod2[1]"; PIN32_IOB15B
+// IO_PORT "pmod2[1]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod2[2]"; PIN57_IOR13A
+// IO_PORT "pmod2[2]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod2[3]"; PIN55_IOR14B
+// IO_PORT "pmod2[3]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
+// IO_LOC "pmod2[4]"; PIN53_IOR15B
+// IO_PORT "pmod2[4]" DRIVE=8 PULL_MODE=UP IO_TYPE=LVCMOS33;
